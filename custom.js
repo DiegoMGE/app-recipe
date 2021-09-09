@@ -105,7 +105,7 @@ async function fetchFavMeals() {
   for (let i = 0; i < mealIds.length; i++) {
     const mealId = mealIds[i];
     meal = await getMealById(mealId);
-
+    //
     addMealFav(meal);
   }
 }
