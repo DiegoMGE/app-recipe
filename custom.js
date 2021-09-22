@@ -1,5 +1,7 @@
 const mealsEl = document.getElementById("meals");
 const favContainer = document.getElementById("fav-meals");
+const mealPopup = document.getElementById("meal-popup");
+const popupCloseBtn = document.getElementById("close-popup");
 
 const searchTerm = document.getElementById("search-term");
 const searchBtn = document.getElementById("search");
@@ -154,5 +156,12 @@ searchBtn.addEventListener("click", async () => {
     meals.forEach((meal) => {
       addMeal(meal);
     });
+  } else {
+    console.log("this food does not exists.");
   }
+});
+
+// function to add the information about food: ingredients and so on.
+popupCloseBtn.addEventListener("click", () => {
+  mealPopup.classList.add("hidden");
 });
